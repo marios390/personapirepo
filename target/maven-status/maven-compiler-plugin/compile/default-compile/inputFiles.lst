@@ -1,0 +1,14 @@
+/home/marios390/person-api/src/main/java/com/example/personapi/PersonApiApplication.java
+/home/marios390/person-api/src/main/java/com/example/personapi/controller/PersonController.java
+/home/marios390/person-api/src/main/java/com/example/personapi/dto/PersonCreateRequest.java
+/home/marios390/person-api/src/main/java/com/example/personapi/dto/PersonResponse.java
+/home/marios390/person-api/src/main/java/com/example/personapi/dto/PersonSearchRequest.java
+/home/marios390/person-api/src/main/java/com/example/personapi/dto/PersonUpdateRequest.java
+/home/marios390/person-api/src/main/java/com/example/personapi/exception/ErrorResponse.java
+/home/marios390/person-api/src/main/java/com/example/personapi/exception/FieldErrorItem.java
+/home/marios390/person-api/src/main/java/com/example/personapi/exception/GlobalExceptionHandler.java
+/home/marios390/person-api/src/main/java/com/example/personapi/exception/PersonNotFoundException.java
+/home/marios390/person-api/src/main/java/com/example/personapi/exception/ValidationErrorResponse.java
+/home/marios390/person-api/src/main/java/com/example/personapi/model/Person.java
+/home/marios390/person-api/src/main/java/com/example/personapi/repository/PersonRepository.java
+/home/marios390/person-api/src/main/java/com/example/personapi/service/PersonService.java
