@@ -1,0 +1,77 @@
+openapi: 3.1.0
+info:
+  title: Person Records Service API - Last Name Search
+  version: 1.0.0
+  description: Search endpoint for person records by last name.
+servers:
+  - url: http://localhost:8080
+paths:
+  /persons/search:
+    get:
+      summary: Search persons by last name
+      parameters:
+        - name: lastName
+          in: query
+          required: true
+          schema:
+            type: string
+            minLength: 1
+      responses:
+        "200":
+          description: Matching persons (empty list when no matches)
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Person"
+        "400":
+          description: Validation error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ValidationError"
+components:
+  schemas:
+    Person:
+      type: object
+      required:
+        - id
+        - firstName
+        - lastName
+        - email
+      properties:
+        id:
+          type: integer
+          format: int64
+        firstName:
+          type: string
+          minLength: 1
+        lastName:
+          type: string
+          minLength: 1
+        email:
+          type: string
+          format: email
+    ValidationError:
+      type: object
+      required:
+        - message
+        - fieldErrors
+      properties:
+        message:
+          type: string
+        fieldErrors:
+          type: array
+          items:
+            $ref: "#/components/schemas/FieldError"
+    FieldError:
+      type: object
+      required:
+        - field
+        - message
+      properties:
+        field:
+          type: string
+        message:
+          type: string
