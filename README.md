@@ -10,6 +10,8 @@ mvn spring-boot:run
 
 Service listens on `http://localhost:8080`.
 
+H2 console is available at `http://localhost:8080/h2-console`.
+
 ## Endpoints
 
 - `GET /persons` - list all persons
