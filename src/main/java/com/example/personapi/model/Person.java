@@ -6,7 +6,7 @@ import org.springframework.data.relational.core.mapping.Table;
 
 @Table("persons")
 public record Person(
-    @Id @Column("ID") Long id,
+    @Id @Column("id") Long id,
     @Column("first_name") String firstName,
     @Column("last_name") String lastName,
     @Column("email") String email
